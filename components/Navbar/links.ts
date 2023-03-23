@@ -1,14 +1,14 @@
 export const links = [
   {
     label: "Bosh sahifa",
-    link: "",
+    link: "landing",
   },
   {
     label: "Sertifikat",
-    link: "",
+    link: "sertificate",
   },
   {
     label: "Kontakt",
-    link: "",
+    link: "contact",
   },
 ];

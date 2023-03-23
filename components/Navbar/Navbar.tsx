@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { links } from "./links";
 import MobileMenu from "./MobileMenu";
+import { Link as Scroll } from "react-scroll";
 
 const languages = [
   {
@@ -83,7 +84,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white py-1 fixed top-0 left-0 right-0">
+      <nav className="bg-white py-1 fixed top-0 left-0 right-0 z-50">
         <div className="container">
           <div className="sm:my-5 my-2 flex justify-between items-center">
             <div className="flex items-center">
@@ -100,12 +101,20 @@ const Navbar = () => {
               <ul className="lg:flex hidden">
                 {links.map(({ label, link }, i) => (
                   <li key={i}>
-                    <Link
-                      href={link}
-                      className="transition-all hover:bg-lightWhite font-bold border-radius-sm text-lightGreen py-[15px] px-[30px]"
+                    <Scroll
+                      to={link}
+                      // activeStyle={{
+                      //   background: "red",
+                      // }}
+                      activeClass="active-link"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                      // offset={150}
+                      className="transition-all cursor-pointer hover:bg-lightWhite font-bold border-radius-sm text-lightGreen py-[15px] px-[30px]"
                     >
                       {label}
-                    </Link>
+                    </Scroll>
                   </li>
                 ))}
               </ul>
@@ -144,7 +153,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      <MobileMenu activeMenu={activeMenu} />
+      <MobileMenu activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
     </>
   );
 };

@@ -9,7 +9,7 @@ interface Props {
 const NegativeCard = ({ img, title, description }: Props) => {
   return (
     <div className="border-radius-lg bg-lightGreen p-[18px] sm:pr-11 negative-card mb-5">
-      <div className="flex items-center sm:flex-row flex-col text-center">
+      <div className="flex items-center sm:flex-row flex-col sm:text-left text-center ">
         <div className="min-w-[142px] h-[157px] sm:mr-8 sm:mb-0 mb-6">
           <img
             src={img}

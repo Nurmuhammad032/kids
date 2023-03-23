@@ -12,9 +12,18 @@
     "@types/node": "18.15.5",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
+    "@types/react-scroll": "^1.8.6",
+    "@types/react-slick": "^0.23.10",
+    "@types/react-text-mask": "^5.4.11",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.8.0",
+    "react-player": "^2.12.0",
+    "react-scroll": "^1.8.9",
+    "react-slick": "^0.29.0",
+    "react-text-mask": "^5.5.0",
+    "slick-carousel": "^1.8.1",
     "typescript": "5.0.2"
   },
   "devDependencies": {

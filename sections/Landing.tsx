@@ -5,10 +5,11 @@ const Landing = () => {
     "font-bold sm:text-base text-sm border-radius-lg py-5 px-[30px] border-[3px] sm:mx-4 mx-0 lg:mx-0 border-solid border-white flex items-center";
   return (
     <section
-      className="sm:mt-24 mt-16 h-[60rem] bg-cover custom-background bg-no-repeat"
+      className="sm:mt-24 mt-16 h-[60rem] bg-cover custom-background bg-no-repeat large-container"
       style={{
         backgroundImage: "url('/images/landing-background.png')",
       }}
+      id="landing"
     >
       <div className="container h-full">
         <div className="h-[60rem] xl:w-1/2 lg:w-[60%] sm:w-[90%] w-full lg:m-0 lg:text-left text-center mx-auto flex flex-col lg:justify-start justify-between lg:items-stretch items-center">

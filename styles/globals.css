@@ -55,6 +55,34 @@
     @apply max-w-7xl mx-auto px-4;
   }
 
+  .large-container {
+    @apply max-w-[2200px] mx-auto;
+  }
+
+  .content {
+    @apply py-24 sm:pt-32;
+  }
+
+  .section-background {
+    @apply absolute top-0 left-0 -z-10 w-full sm:h-4/5 h-full;
+  }
+
+  .section__with-background img.bacground-img {
+    @apply w-full h-full xl:object-fill object-cover -z-10 absolute;
+  }
+
+  .section__with-background {
+    @apply large-container relative sm:pb-28 pb-12;
+  }
+
+  .section-title {
+    @apply sm:text-[42px] text-[26px] mb-1 font-extraBold capitalize;
+  }
+
+  .section-description {
+    @apply sm:text-xl text-base font-bold;
+  }
+
   .center-mode {
     @apply flex items-center justify-center;
   }
@@ -66,7 +94,21 @@
   .border-radius-lg {
     @apply rounded-tl-[35px] rounded-br-[35px] rounded-tr-[5px] rounded-bl-[5px];
   }
+
+  .form-input {
+    @apply border-radius-lg py-6 px-8 bg-[#11707E] border-2 outline-none text-white w-full   text-base font-bold placeholder:text-white border-solid border-white/60;
+  }
+
+  .active-link {
+    @apply !bg-lightWhite;
+  }
+
+  .active__mobile-link {
+    @apply !text-darkGreen font-bold;
+  }
 }
+
+/* --------------- Background styles --------------- */
 
 @media screen and (min-width: 1024px) {
   .custom-background {
@@ -80,17 +122,13 @@
   }
 }
 
+/* --------------- Card styles --------------- */
+
 .negative-card {
   width: calc(50% - 40px);
 }
 
 @media screen and (max-width: 1024px) {
-  .negative-card {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 768px) {
   .negative-card {
     width: 100%;
   }
@@ -99,4 +137,168 @@
 .negative-card:last-child {
   background: linear-gradient(94.81deg, #6a35ff -13.38%, #9772fe 101.22%);
   border: 3px solid #ffffff;
+}
+
+.vitamin-card {
+  width: calc(25% - 29px);
+}
+
+@media screen and (max-width: 1024px) {
+  .vitamin-card {
+    width: calc(33% - 29px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .vitamin-card {
+    width: calc(50% - 29px);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .vitamin-card {
+    width: 100%;
+  }
+}
+
+/* --------------- React slick, custom arrow - Advice and Sertificate section --------------- */
+
+.advice-section .slick-slide img {
+  transition: all 1s linear;
+}
+
+.advice-section .slick-arrow,
+.sertificate-section .slick-arrow {
+  display: block !important;
+  width: 45px !important;
+  height: 45px !important;
+  top: auto !important;
+  bottom: -13rem !important;
+}
+
+.slick-arrow.slick-disabled {
+  opacity: 0.4;
+  user-select: none;
+  cursor: not-allowed;
+}
+
+.advice-section .slick-prev,
+.sertificate-section .slick-prev {
+  left: 40% !important;
+}
+
+.advice-section .slick-next,
+.sertificate-section .slick-next {
+  right: 40% !important;
+}
+
+@media screen and (min-width: 768px) {
+  .advice-section .slick-active + .slick-active + .slick-active img {
+    transform: scale(0.7) rotate(15deg) !important;
+  }
+
+  .advice-section .slick-active + .slick-active img {
+    transform: rotate(0) !important;
+  }
+
+  .advice-section .slick-active img {
+    transform: scale(0.7) rotate(-15deg) !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slick-slide {
+    transition: all 0.5s linear;
+  }
+
+  .slick-slide:not(.slick-active) {
+    opacity: 0;
+  }
+
+  .advice-section .slick-prev,
+  .sertificate-section .slick-prev {
+    left: 20% !important;
+  }
+
+  .advice-section .slick-next,
+  .sertificate-section .slick-next {
+    right: 20% !important;
+  }
+
+  .advice-section .slick-arrow,
+  .sertificate-section .slick-arrow {
+    bottom: -5rem !important;
+  }
+}
+
+/* --------------- Comment section react slick styles --------------- */
+
+.comment-section .slick-slide > div {
+  margin: 0 5rem;
+}
+
+.comment-section .slick-arrow {
+  display: block !important;
+  width: 45px !important;
+  height: 45px !important;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.comment-section .slick-prev {
+  left: 25% !important;
+}
+
+.comment-section .slick-next {
+  right: 25% !important;
+}
+
+@media screen and (max-width: 1400px) {
+  .comment-section .slick-prev {
+    left: 15% !important;
+  }
+
+  .comment-section .slick-next {
+    right: 15% !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .comment-section .slick-prev {
+    left: 1rem !important;
+  }
+
+  .comment-section .slick-next {
+    right: 1rem !important;
+  }
+
+  .comment-section .slick-slide > div {
+    margin: 0 1rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .comment-section .slick-slide > div {
+    margin: 0 !important;
+  }
+
+  .comment-section .slick-list {
+    padding: 0 !important;
+  }
+
+  .comment-section .slick-arrow {
+    width: 35px !important;
+    height: 35px !important;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .comment-section .slick-prev {
+    left: 0rem !important;
+  }
+
+  .comment-section .slick-next {
+    right: 0rem !important;
+  }
 }
